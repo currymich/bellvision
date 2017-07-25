@@ -44,7 +44,7 @@ label {
     border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
-.is-center {
+.align-center {
     text-align: center;
 }
 
@@ -134,9 +134,9 @@ a.pure-button-primary {
  * This is the blue top section that appears on the page.
  */
 
-.splash-container {
+.splash-wrapper {
     background: #1f8dd6;
-    z-index: 1;
+    z-index: -1;
     overflow: hidden;
     /* The following styles are required for the "scroll-over" effect */
     width: 100%;
@@ -147,7 +147,7 @@ a.pure-button-primary {
 }
 
 .splash {
-    /* absolute center .splash within .splash-container */
+    /* absolute center .splash within .splash-wrapper */
     width: 80%;
     height: 50%;
     margin: auto;
@@ -266,9 +266,9 @@ body {
     float: right;
 }
 
-/* We increase the height of the splash-container */
+/* We increase the height of the splash-wrapper */
 
-/*    .splash-container {
+/*    .splash-wrapper {
         height: 500px;
     }*/
 

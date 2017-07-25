@@ -25,80 +25,79 @@
   <!--[if gt IE 8]><!-->
       <link rel="stylesheet" href="css/style.css">
   <!--<![endif]-->
+
+  <script src="js/script.js" charset="utf-8"></script>
 </head>
 <body>
 
-<div class="header">
-    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-        <a class="pure-menu-heading" href="">Bell Dental Center</a>
+<div class="menu-wrapper pure-g" id="menu">
 
-        <ul class="pure-menu-list">
-            <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Tour</a></li>
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Sign Up</a></li>
-        </ul>
+
+    <a href="#" class="pure-menu pure-menu-heading pure-u-1-2 ">Bell Dental Center</a>
+    <div class="pure-menu pure-u-md-hide pure-u-sm-1-2"
+      <a href="#" class="custome-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
     </div>
+
+    <div class="pure-u-sm-1 pure-u-md-1-2 align-right">
+        <div class="pure-menu pure-menu-horizontal custom-can-transform">
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
+                <li class="pure-menu-item"><a href="#about" class="pure-menu-link">About</a></li>
+                <li class="pure-menu-item"><a href="#visit" class="pure-menu-link">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
 </div>
 
-<div class="splash-container">
+<div class="splash-wrapper">
     <div class="splash">
-        <h1 class="splash-head">Big Bold Text</h1>
-        <p class="splash-subhead">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        </p>
-        <p>
-            <a href="http://purecss.io" class="pure-button pure-button-primary">Get Started</a>
-        </p>
+        <h1 class="splash-head">Bell Dental Center</h1>
     </div>
 </div>
 
 <div class="content-wrapper">
-    <div class="content">
-        <h2 class="content-head is-center">Excepteur sint occaecat cupidatat.</h2>
+    <div class="content" id="about">
 
-        <div class="pure-g">
-            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+        <h2 class="content-head align-center">where smiles happen...</h2>
 
-                <h3 class="content-subhead">
-                    <i class="fa fa-rocket"></i>
-                    Get Started Quickly
+        <div class="pure-g l-box-lrg">
+            <div class="pure-u-lg-1-8"></div>
+
+            <div class="l-box pure-u-1 pure-u-lg-1-4">
+                <h3 class="content-subhead align">
+                    <i class="fa fa-check-circle-o"></i>
+                    Full Service Dentistry
                 </h3>
                 <p>
-                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                    Our services include general checkups, crowns, veneers, root canal, implants, and braces
                 </p>
             </div>
-            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+            <div class="l-box pure-u-1 pure-u-lg-1-4">
                 <h3 class="content-subhead">
-                    <i class="fa fa-mobile"></i>
-                    Responsive Layouts
+                    <i class="fa fa-money"></i>
+                    Flexible Payment Plans
                 </h3>
                 <p>
-                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                    We accept many insurances including Denti-Cal and will work with your budget in mind
                 </p>
             </div>
-            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+            <div class="l-box pure-u-1 pure-u-lg-1-4">
                 <h3 class="content-subhead">
-                    <i class="fa fa-th-large"></i>
-                    Modular
+                    <i class="fa fa-plus-circle"></i>
+                    Quick Turn Around
                 </h3>
                 <p>
-                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                    Bell Dental Center has partnered with a local lab enabling us to provide faster, cheaper prosthetics
                 </p>
             </div>
-            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-                <h3 class="content-subhead">
-                    <i class="fa fa-check-square-o"></i>
-                    Plays Nice
-                </h3>
-                <p>
-                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
-                </p>
-            </div>
+
+            <div class="pure-u-lg-1-8"></div>
         </div>
     </div>
 
     <div class="ribbon l-box-lrg pure-g">
-        <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
+        <div class="l-box-lrg align-center pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
             <img width="300" alt="File Icons" class="pure-img-responsive" src="img/file-icons.png">
         </div>
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
@@ -114,56 +113,84 @@
         </div>
     </div>
 
-    <div class="content">
-        <h2 class="content-head is-center">Dolore magna aliqua. Uis aute irure.</h2>
+    <div class="content" id="visit">
+        <h2 class="content-head align-center">Call or Visit us at one of our convenient locations</h2>
 
-        <div class="pure-g">
-            <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
-                <form class="pure-form pure-form-stacked">
-                    <fieldset>
+            <div class="pure-u-1-6"></div>
 
-                        <label for="name">Your Name</label>
-                        <input id="name" type="text" placeholder="Your Name">
-
-
-                        <label for="email">Your Email</label>
-                        <input id="email" type="email" placeholder="Your Email">
-
-                        <label for="password">Your Password</label>
-                        <input id="password" type="password" placeholder="Your Password">
-
-                        <button type="submit" class="pure-button">Sign Up</button>
-                    </fieldset>
-                </form>
+            <div class="pure-u-1 pure-u-md-1-2">
+                <h4>Visit Us</h4>
+                <iframe src="https://www.google.com/maps/d/embed?mid=1I3u3SHlen4OHvlv8qJIu0nMJUK8"></iframe>
             </div>
 
-            <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
-                <h4>Contact Us</h4>
+            <div class="pure-u-1 pure-u-md-1-4 pure-g" id="locations">
+              <div class="pure-u-11-24 pure-u-md-1">
+                <h4>San Leandro - East</h4>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.
+                  1598 Washington Avenue
+                  <br>
+                  San Leandro, CA 94577
+                  <br>
+                  (510) 545-4588
                 </p>
+              </div>
 
-                <h4>More Information</h4>
+              <div class="pure-u-11-24 pure-u-md-1">
+                <h4>San Leandro - West</h4>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.
+                  2561 Merced Street
+                  <br>
+                  San Leandro, CA 94577
+                  <br>
+                  (510) 323-2289
                 </p>
+              </div>
+
+              <div class="pure-u-11-24 pure-u-md-1">
+                <h4>Berkeley</h4>
+                <p>
+                  3085 Telegraph Avenue
+                  <br>
+                  Berkeley, CA 94705
+                  <br>
+                  (510) 323-2254
+                </p>
+              </div>
+
+              <div class="pure-u-11-24 pure-u-md-1">
+                <h4>San Leandro - East</h4>
+                <p>
+                  7200 Jarvis Avenue
+                  <br>
+                  Newark, CA 94560
+                  <br>
+                  (510) 849-6309
+                </p>
+              </div>
             </div>
+      </div>
+
+      <div class="footer l-box align-center pure-g">
+        <div class="pure-u-1-3"></div>
+        <div class="social pure-u-1-3">
+          <div class="l-box pure-u-1-3 pure-g">
+            <a href="https://www.yelp.com/biz/bell-dental-center-san-leandro?osq=Bell+Dental+Center" class="pure-u-11-24" target="_blank">
+              <img src="img/yelp.svg" class="pure-img-responsive">
+            </a>
+            <a href="https://www.properguideimplant.com" class="pure-u-11-24" target="_blank">
+              <img src="img/properguide.png" class="pure-img-responsive">
+            </a>
+          </div>
         </div>
-
+        <div class="pure-u-1-3"></div>
+        <div class="copyright pure-u-1">
+          &copy; 2017 Bell Dental Center
+        </div>
+      </div>
     </div>
 
-    <div class="footer l-box is-center">
-        View the source of this layout to learn more. Made with love by the YUI Team.
-    </div>
 
 </div>
-
-
-
 
 </body>
 </html>
