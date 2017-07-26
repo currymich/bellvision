@@ -45,7 +45,6 @@ iframe {
 
 .l-box-lrg {
     padding: 2em;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 .align-center {
@@ -216,7 +215,7 @@ a.pure-button-primary {
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    margin: 2em 0 1em;
+    margin: 2em 0;
 }
 
 /* This is a modifier class used when the content-head is inside a ribbon */
@@ -236,6 +235,10 @@ a.pure-button-primary {
 .ribbon {
     background: #2d3e50;
     color: #aaa;
+}
+
+.ribbon div {
+  justify-content: center;
 }
 
 /* This is the class used for the footer */
