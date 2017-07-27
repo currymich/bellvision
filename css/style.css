@@ -268,7 +268,7 @@ a.pure-button-primary {
 }
 
 .menu-wrapper.open {
-    height: 14em;
+    height: 9em;
 }
 
 .custom-menu-3 {
@@ -320,6 +320,10 @@ a.pure-button-primary {
     transform: rotate(-45deg);
 }
 
+#toggle {
+  display: inline-block;
+}
+
 #visit {
   width: 90vw;
   margin: 0 auto;
@@ -351,13 +355,21 @@ a.pure-button-primary {
     width: calc(100% * (1/2) - 2%);
 }
 
+
 @media (min-width: 625px) {
+
   #locations > div {
       width: calc(100% * (1/4) - 2%);
   }
 
   #locations > div:first-of-type {
     margin-top: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  #toggle {
+    display: none;
   }
 }
 

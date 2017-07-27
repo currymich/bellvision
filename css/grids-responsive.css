@@ -274,10 +274,6 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
         text-rendering: auto;
     }
 
-    .pure-u-md-hide {
-      display: none;
-    }
-
     .pure-u-md-1-24 {
         width: 4.1667%;
         *width: 4.1357%;
