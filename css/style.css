@@ -355,6 +355,11 @@ a.pure-button-primary {
     width: calc(100% * (1/2) - 2%);
 }
 
+#yelp {
+  width: 100%;
+  text-align: center;
+}
+
 
 @media (min-width: 625px) {
 
