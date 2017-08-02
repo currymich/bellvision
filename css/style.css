@@ -329,9 +329,13 @@ a.pure-button-primary {
   margin: 0 auto;
   display: flex;
   flex-flow: column;
+  align-items: center;
 }
 
-#visit h2 {
+#visit > div {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
   width: 100%;
 }
 
@@ -340,19 +344,20 @@ a.pure-button-primary {
 }
 
 #locations {
-  margin: 0 4vw;
-  width: 90%;
-  padding: 2em 0;
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-between;
 }
 
 
 #locations > div {
-    display: inline-block;
-    margin:10px 0 0 2%;
-    flex-grow: 1;
-    width: calc(100% * (1/2) - 2%);
+  display: inline-block;
+  padding: 0.25em;
+  width: calc(100% * (1/2) - 0.25em);
+}
+
+#locations p {
+  font-size: 0.85em;
 }
 
 #yelp {
@@ -363,12 +368,23 @@ a.pure-button-primary {
 
 @media (min-width: 625px) {
 
+  #locations {
+    width: 90%;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   #locations > div {
-      width: calc(100% * (1/4) - 2%);
+      width: calc(100% * (1/4));
   }
 
   #locations > div:first-of-type {
     margin-top: 10px;
+  }
+
+  #locations p {
+    font-size: 1em;
   }
 }
 
@@ -390,24 +406,28 @@ a.pure-button-primary {
         font-size: 16px;
     }
 
-    #visit {
-      flex-flow: row wrap;
+    #visit > div {
+      flex-flow: row;
+      justify-content: space-around;
     }
 
     iframe {
       margin: 0;
-      width: 60vw;
       height: 37.5em;
+      flex-grow: 3;
     }
 
     #locations {
       margin: 0;
-      padding: 0 0 0 4em;
-      width: 25vw;
+      padding: 0 2em;
+      min-width: 15em;
+      flex-shrink: 1;
+      flex-flow: column;
+      width: 30%;
     }
 
     #locations > div {
-        width: 100%;
+      width: 100%;
     }
 
     #locations h4:first-of-type, #locations > div:first-of-type {
@@ -425,11 +445,6 @@ a.pure-button-primary {
         .home-menu ul {
             float: right;
         }
-
-    /* We increase the height of the splash-wrapper */
-/*    .splash-wrapper {
-        height: 500px;
-    }*/
 
     /* We decrease the width of the .splash, since we have more width
     to work with */
