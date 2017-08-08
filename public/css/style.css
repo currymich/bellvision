@@ -29,10 +29,24 @@ label {
     height: auto;
 }
 
+#map {
+  width: 90%;
+}
+
 iframe {
   margin: 0 4vw;
-  width: 90%;
+  width: 100%;
   height: 40em;
+}
+
+.overlay {
+   background:transparent;
+   position:relative;
+   margin: 0 4vw;
+   width:100%;
+   height:40em; /* your iframe height */
+   top:40em;  /* your iframe height */
+   margin-top:-40em;  /* your iframe height */
 }
 
 /*
@@ -82,11 +96,12 @@ iframe {
  * -- PURE BUTTON STYLES --
  * I want my pure-button elements to look a little different
  */
-.pure-button {
-    background-color: #1f8dd6;
-    color: white;
+.pure-button, #submit {
+    background-color: #cceeff;
+    color: black;
     padding: 0.5em 2em;
     border-radius: 5px;
+    border: 2px solid black;
 }
 
 a.pure-button-primary {
@@ -161,8 +176,10 @@ a.pure-button-primary {
 
 .splash {
     /* absolute center .splash within .splash-wrapper */
-    width: 80%;
-    height: 50%;
+    width: 100%;
+    height: 250px;
+    background: rgba(255, 255, 255, 0.85);
+    color: black;
     margin: auto;
     position: absolute;
     top: 100px; left: 0; bottom: 0; right: 0;
@@ -172,12 +189,8 @@ a.pure-button-primary {
 
 /* This is the main heading that appears on the blue section */
 .splash-head {
-    font-size: 20px;
-    font-weight: bold;
-    background: rgba(255, 255, 255, 0.5);
-    color: black;
-    border: 3px solid black;
-    padding: 1em 1.6em;
+    font-size: 50px;
+    padding: 0 1.6em;
     font-weight: 100;
     border-radius: 5px;
     line-height: 1em;
@@ -408,13 +421,9 @@ textarea {
 
 #submit {
   display: inline-block;
-  border-radius: 3px;
-  border: none;
+  border: 1px solid #777;
   font-size: 0.9rem;
   padding: 0.5rem 0.8em;
-  background: #69c773;
-  border-bottom: 1px solid #498b50;
-  color: white;
   -webkit-font-smoothing: antialiased;
   font-weight: bold;
   margin: 0;
@@ -485,6 +494,13 @@ textarea {
       flex-grow: 3;
     }
 
+    .overlay {
+      margin: 0;
+       height:37.5em; /* your iframe height */
+       top:37.5em;  /* your iframe height */
+       margin-top:-37.5em;  /* your iframe height */
+    }
+
     #locations {
       margin: 0;
       padding: 0 2em;
@@ -514,17 +530,6 @@ textarea {
             float: right;
         }
 
-    /* We decrease the width of the .splash, since we have more width
-    to work with */
-    .splash {
-        width: 50%;
-        height: 50%;
-    }
-
-    .splash-head {
-        font-size: 250%;
-    }
-
 }
 
 .custom-menu-3 {
@@ -542,9 +547,6 @@ textarea {
  */
 @media (min-width: 78em) {
     /* We increase the header font size even more */
-    .splash-head {
-        font-size: 300%;
-    }
 
     #about > div {
       width: 75vw;
