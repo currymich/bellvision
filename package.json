@@ -1,0 +1,28 @@
+{
+  "name": "bell_dental",
+  "version": "1.0.0",
+  "description": "Bell Dental Core Site",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/currymich/belldental.git"
+  },
+  "author": "currymich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/currymich/belldental/issues"
+  },
+  "homepage": "https://github.com/currymich/belldental#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.3",
+    "morgan": "^1.8.2",
+    "path": "^0.12.7",
+    "sendgrid": "^5.2.0"
+  }
+}
