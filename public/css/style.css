@@ -174,10 +174,15 @@ a.pure-button-primary {
     position: fixed !important;
 }
 
+.text-wrapper {
+  width: 300px;
+  margin: 0 auto;
+}
+
 .splash {
     /* absolute center .splash within .splash-wrapper */
     width: 100%;
-    height: 250px;
+    height: 225px;
     background: rgba(255, 255, 255, 0.85);
     color: black;
     margin: auto;
@@ -189,7 +194,7 @@ a.pure-button-primary {
 
 /* This is the main heading that appears on the blue section */
 .splash-head {
-    font-size: 50px;
+    font-size: 30px;
     padding: 0 1.6em;
     font-weight: 100;
     border-radius: 5px;
@@ -468,6 +473,14 @@ textarea {
 
   #locations > div {
       width: calc(100% * (1/4));
+  }
+
+  .text-wrapper {
+    width: 100%;
+  }
+
+  .splash-head {
+      font-size: 50px;
   }
 }
 
