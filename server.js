@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(logger('dev'));
 
 app.get('/', function(req, res){
-  res.sendfile('public/index.html');
+  res.sendFile('index.html', {root: __dirname});
 });
 
 app.post('/appointment', function(req,res) {
