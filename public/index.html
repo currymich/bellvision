@@ -9,13 +9,13 @@
 
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/pure.css">
+  <link rel="stylesheet" href="css/pure-min.css">
 
   <!--[if lte IE 8]>
-      <link rel="stylesheet" href="css/grids-responsive-old-ie.css">
+      <link rel="stylesheet" href="css/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
-      <link rel="stylesheet" href="css/grids-responsive.css">
+      <link rel="stylesheet" href="css/grids-responsive-min.css">
   <!--<![endif]-->
 
   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
@@ -87,7 +87,7 @@
                     Quick Turn Around
                 </h3>
                 <p>
-                    Bell Dental Center has partnered with a local lab enabling us to provide faster, cheaper prosthetics
+                    Bell Dental Center has partnered with a local lab enabling us to provide faster, more affordable prosthetics
                 </p>
             </div>
 
@@ -228,7 +228,7 @@
               <div>
                 <h4>San Leandro - East</h4>
                 <p>
-                  1598 Washington Avenue
+                  1598 Washington Ave
                   <br>
                   San Leandro, CA 94577
                   <br>
@@ -270,6 +270,55 @@
               </div>
             </div>
           </div>
+
+        <form id="appointment" action="/appointment", method="POST">
+          <h2>Request an appointment</h2>
+          <div class="field">
+    				<label>Office Location:
+              <select name="office">
+                <option value="Washington Ave">San Leandro - Washington Ave</option>
+                <option value="Merced">San Leandro - Merced St</option>
+                <option value="Newark">Newark</option>
+                <option value="Berkeley">Berkeley</option>
+              </select>
+            </label>
+    			</div>
+
+          <div class="field">
+    				<label>Name:
+      				<input type="text" name="name" required>
+            </label>
+    			</div>
+
+          <div class="field">
+            <label>Date of Birth:
+              <input type="date" name="dob" required>
+            </label>
+          </div>
+
+          <div class="field">
+    				<label>Email:
+      				<input type="email" name="email" required>
+            </label>
+    			</div>
+
+    			<div class="field">
+            <label>Phone Number:
+      				<input type="text" name="phone" required>
+            </label>
+    			</div>
+
+          <div class="field">
+            <label>Insurance Provider:
+      				<input type="text" name="insurance">
+            </label>
+    			</div>
+
+          <div class="field">
+            <input type="submit" id="submit" value="Send">
+          </div>
+        </form>
+
       </div>
 
       <div class="footer l-box align-center pure-g">
@@ -290,10 +339,8 @@
     </div>
 </div>
 
+  <script src="js/jquery-2.1.0.min.js" charset="utf-8"></script>
   <script src="js/script.js" charset="utf-8"></script>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="email-form/js/jquery.validate.min.js"></script>
-  <script type="text/javascript" src="email-form/js/additional-methods.min.js"></script>
 
 </body>
 </html>
