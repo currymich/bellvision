@@ -17,6 +17,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(logger('dev'));
 
+app.use('/sitemap', express.static('sitemap.txt'))
+
 app.get('/', function(req, res){
   res.sendFile('index.html', {root: __dirname});
 });
