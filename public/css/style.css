@@ -362,12 +362,21 @@ a.pure-button-primary {
 }
 
 #yelp {
+  padding: 2em;
   width: 100%;
   text-align: center;
 }
 
+#yelp img {
+  width: 200px;
+}
+
 .field {
   margin: 1em 0;
+}
+
+#apply {
+  padding: 2em;
 }
 
 #appointment {

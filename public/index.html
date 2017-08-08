@@ -59,60 +59,61 @@
 <div class="content-wrapper">
     <div class="content" id="visit">
 
-        <h2 class="content-head align-center">Call or Visit us at one of our convenient locations</h2>
-          <div>
+      <h2 class="content-head align-center">Call or Visit us at one of our convenient locations</h2>
+        <div>
 
-            <iframe src="https://www.google.com/maps/d/embed?mid=1I3u3SHlen4OHvlv8qJIu0nMJUK8"></iframe>
+          <iframe src="https://www.google.com/maps/d/embed?mid=1I3u3SHlen4OHvlv8qJIu0nMJUK8"></iframe>
 
 
-            <div id="locations">
-              <div>
-                <h4>San Leandro - East</h4>
-                <p>
-                  1598 Washington Ave
-                  <br>
-                  San Leandro, CA 94577
-                  <br>
-                  (510) 545-4588
-                </p>
-              </div>
+          <div id="locations">
+            <div>
+              <h4>San Leandro - East</h4>
+              <p>
+                1598 Washington Ave
+                <br>
+                San Leandro, CA 94577
+                <br>
+                (510) 545-4588
+              </p>
+            </div>
 
-              <div>
-                <h4>San Leandro - West</h4>
-                <p>
-                  2561 Merced Street
-                  <br>
-                  San Leandro, CA 94577
-                  <br>
-                  (510) 323-2289
-                </p>
-              </div>
+            <div>
+              <h4>San Leandro - West</h4>
+              <p>
+                2561 Merced Street
+                <br>
+                San Leandro, CA 94577
+                <br>
+                (510) 323-2289
+              </p>
+            </div>
 
-              <div>
-                <h4>Berkeley</h4>
-                <p>
-                  3085 Telegraph Avenue
-                  <br>
-                  Berkeley, CA 94705
-                  <br>
-                  (510) 323-2254
-                </p>
-              </div>
+            <div>
+              <h4>Berkeley</h4>
+              <p>
+                3085 Telegraph Avenue
+                <br>
+                Berkeley, CA 94705
+                <br>
+                (510) 323-2254
+              </p>
+            </div>
 
-              <div>
-                <h4>San Leandro - East</h4>
-                <p>
-                  7200 Jarvis Avenue
-                  <br>
-                  Newark, CA 94560
-                  <br>
-                  (510) 849-6309
-                </p>
-              </div>
+            <div>
+              <h4>San Leandro - East</h4>
+              <p>
+                7200 Jarvis Avenue
+                <br>
+                Newark, CA 94560
+                <br>
+                (510) 849-6309
+              </p>
             </div>
           </div>
+        </div>
 
-        <div class="pure-g l-box-lrg">
+
+        <div id="services" class="pure-g l-box-lrg">
 
             <div class="l-box pure-u-1 pure-u-lg-1-3">
                 <h3 class="content-subhead align">
@@ -138,7 +139,7 @@
                     Quick Turn Around
                 </h3>
                 <p>
-                    Bell Dental Center has partnered with a local lab enabling us to provide faster, more affordable prosthetics
+                    Bell Dental Center is uniquely partnered with an in-house dental lab enabling us to provide high quality prosthetics at a fraction of the price
                 </p>
             </div>
 
@@ -149,6 +150,58 @@
             <img src="https://dyn.yelpcdn.com/extimg/en_US/rrc/1Ur91eQw8cLb0KtIFU_Dkw.png" alt="Checkout our business on yelp!">
           </a>
         </div>
+
+        <div id="apply">
+
+            <form id="appointment" action="/appointment", method="POST">
+              <h2>Request an appointment</h2>
+              <div class="field">
+        				<label>Office Location:
+                  <select name="office">
+                    <option value="Washington Ave">San Leandro - Washington Ave</option>
+                    <option value="Merced">San Leandro - Merced St</option>
+                    <option value="Newark">Newark</option>
+                    <option value="Berkeley">Berkeley</option>
+                  </select>
+                </label>
+        			</div>
+
+              <div class="field">
+        				<label>Name:
+          				<input type="text" name="name" required>
+                </label>
+        			</div>
+
+              <div class="field">
+                <label>Date of Birth:
+                  <input type="date" name="dob" required>
+                </label>
+              </div>
+
+              <div class="field">
+        				<label>Email:
+          				<input type="email" name="email" required>
+                </label>
+        			</div>
+
+        			<div class="field">
+                <label>Phone Number:
+          				<input type="text" name="phone" required>
+                </label>
+        			</div>
+
+              <div class="field">
+                <label>Insurance Provider:
+          				<input type="text" name="insurance">
+                </label>
+        			</div>
+
+              <div class="field">
+                <input type="submit" id="submit" value="Send">
+              </div>
+            </form>
+
+          </div>
     </div>
 
     <div class="ribbon l-box-lrg pure-g">
@@ -163,7 +216,7 @@
           <h3 class="content-head-ribbon">William Choi, DMD, DICOI, FAGD - General Dentist</h3>
           <p>
             Clinical Instructor - Stanford University Medical Center<br>
-            Assistant Clinical Professor, Hospital Dentistry and Oral Surgery - UCSF (Volunteer)<br>
+            Former Assistant Clinical Professor, Hospital Dentistry and Oral Surgery - UCSF (Volunteer)<br>
             Diplomat of the International Congress of Oral Implantology (DICOI)<br>
             Fellowship in the Academy of General Dentistry<br>
             Hospital Dentistry Certification - University of California, San Francisco<br>
@@ -268,57 +321,6 @@
 
     </div>
 
-    <div class="content" id="apply">
-
-        <form id="appointment" action="/appointment", method="POST">
-          <h2>Request an appointment</h2>
-          <div class="field">
-    				<label>Office Location:
-              <select name="office">
-                <option value="Washington Ave">San Leandro - Washington Ave</option>
-                <option value="Merced">San Leandro - Merced St</option>
-                <option value="Newark">Newark</option>
-                <option value="Berkeley">Berkeley</option>
-              </select>
-            </label>
-    			</div>
-
-          <div class="field">
-    				<label>Name:
-      				<input type="text" name="name" required>
-            </label>
-    			</div>
-
-          <div class="field">
-            <label>Date of Birth:
-              <input type="date" name="dob" required>
-            </label>
-          </div>
-
-          <div class="field">
-    				<label>Email:
-      				<input type="email" name="email" required>
-            </label>
-    			</div>
-
-    			<div class="field">
-            <label>Phone Number:
-      				<input type="text" name="phone" required>
-            </label>
-    			</div>
-
-          <div class="field">
-            <label>Insurance Provider:
-      				<input type="text" name="insurance">
-            </label>
-    			</div>
-
-          <div class="field">
-            <input type="submit" id="submit" value="Send">
-          </div>
-        </form>
-
-      </div>
 
       <div class="footer l-box align-center pure-g">
         <div class="pure-u-1-3"></div>
