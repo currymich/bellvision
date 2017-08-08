@@ -373,6 +373,7 @@ a.pure-button-primary {
 #appointment {
   border: 1px solid #eee;
   padding: 2em;
+  max-width: 500px;
   margin: 3em auto;
 }
 
