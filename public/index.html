@@ -166,7 +166,17 @@
             <form id="appointment" action="/appointment", method="POST">
               <h2>Request an appointment</h2>
               <div class="field">
-        				<label>Office Location:
+                <label>Are you already a patient?
+                  <select name="new">
+                    <option value="Already a patient">Yes</option>
+                    <option value="New Patient">No, first time</option>
+                  </select>
+                </label>
+
+              </div>
+
+              <div class="field">
+        				<label>Prefered office location:<br>
                   <select name="office">
                     <option value="Washington Ave">San Leandro - Washington Ave</option>
                     <option value="Merced">San Leandro - Merced St</option>
@@ -203,6 +213,12 @@
               <div class="field">
                 <label>Insurance Provider:
           				<input type="text" name="insurance">
+                </label>
+        			</div>
+
+              <div class="field">
+                <label>Reason for visit:
+          				<input type="text" name="reason">
                 </label>
         			</div>
 

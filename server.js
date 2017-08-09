@@ -24,7 +24,7 @@ app.get('/', function(req, res){
 });
 
 app.post('/appointment', function(req,res) {
-  console.log(req.body);
+  console.log('Sending the following data to belldentalcenter\n', req.body);
   var request = sg.emptyRequest({
     method: 'POST',
     path: '/v3/mail/send',
@@ -66,12 +66,14 @@ app.post('/appointment', function(req,res) {
       <td valign="top" class="td1">
         <p class="p1"><span class="s1"><b>﻿New Patient Application</b></span><span class="s2"><br><br>
 </span></p>
+        <p class="p2"><span class="s1">New Patient?: ${req.body.new}</span></p>
         <p class="p2"><span class="s1">Prefered Office Location: ${req.body.office}</span></p>
         <p class="p2"><span class="s1">Patient Name: ${req.body.name}</span></p>
         <p class="p2"><span class="s1">Patient Phone Number: ${req.body.phone}</span></p>
         <p class="p2"><span class="s1">Patient Email: ${req.body.email}</span></p>
         <p class="p2"><span class="s1">Patient Date of Birth: ${req.body.dob}</span></p>
         <p class="p2"><span class="s1">Patient Insurance Provider: ${req.body.insurance}</span></p>
+        <p class="p2"><span class="s1">Reason for visit: ${req.body.reason}</span></p>
       </td>
     </tr>
   </tbody>
