@@ -110,7 +110,7 @@
             </div>
 
             <div>
-              <h4>San Leandro - East</h4>
+              <h4>Newark</h4>
               <p>
                 7200 Jarvis Avenue
                 <br>
@@ -188,7 +188,7 @@
 
               <div class="field">
         				<label>Name:
-          				<input type="text" name="name" required>
+          				<input type="text" name="name" placeholder="Jane Doe" required>
                 </label>
         			</div>
 
@@ -200,19 +200,20 @@
 
               <div class="field">
         				<label>Email:
-          				<input type="email" name="email" required>
+          				<input type="email" name="email" placeholder="email@example.com" required>
                 </label>
         			</div>
 
         			<div class="field">
                 <label>Phone Number:
-          				<input type="text" name="phone" required>
+          				<input type="text" name="phone" placeholder="(510)545-4588" required>
                 </label>
         			</div>
 
               <div class="field">
                 <label>Insurance Provider:
-          				<input type="text" name="insurance">
+          				<input type="text" name="insurance" placeholder="Example Dental" oninvalid="this.setCustomValidity('Please enter the name of your insurance provider or `Private Patient` if N/A')"
+                  oninput="setCustomValidity('')"   required>
                 </label>
         			</div>
 
