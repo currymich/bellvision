@@ -24,7 +24,6 @@ app.get('/', function(req, res){
 });
 
 app.post('/appointment', function(req,res) {
-  console.log('sending', req)
   var request = sg.emptyRequest({
     method: 'POST',
     path: '/v3/mail/send',
@@ -86,14 +85,14 @@ app.post('/appointment', function(req,res) {
   });
   sg.API(request)
   .then(function (response) {
-    console.log(response.body);
+    console.log('send successful', response.body);
 
     setTimeout(function(){res.redirect('/')}, 3000);
   })
   .catch(function (error) {
     // error is an instance of SendGridError
     // The full response is attached to error.response
-    console.log(error.response.statusCode);
+    console.log('send had errors', error.response.statusCode);
     setTimeout(function(){res.redirect('/')}, 3000);
   });
 
