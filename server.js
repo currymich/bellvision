@@ -9,8 +9,7 @@ var logger      = require('morgan');
 var path        = require('path')
 var port        = process.env.PORT || 4000;
 
-var sg = require('sendgrid');
-sg.setApiKey(process.env.API_KEY);
+var sg = require('sendgrid')(process.env.API_KEY);
 
 // MIDDLEWARE
 app.use(express.static(path.join(__dirname, 'public')))
@@ -63,23 +62,23 @@ app.post('/appointment', function(req,res) {
             </table>
             </body>
             </html>
-            `      
+            `
     }
-  });
-  sg.send(msg)
-  .then(function (response) {
-    console.log('send successful', response.body);
 
-    setTimeout(function(){res.redirect('/')}, 3000);
+    sg.send(msg)
+    .then(function (response) {
+      console.log('send successful', response.body);
+
+      setTimeout(function(){res.redirect('/')}, 3000);
+    })
+    .catch(function (error) {
+      // error is an instance of SendGridError
+      // The full response is attached to error.response
+      console.log('send had errors', error.response.statusCode);
+      setTimeout(function(){res.redirect('/')}, 3000);
+    });
+
   })
-  .catch(function (error) {
-    // error is an instance of SendGridError
-    // The full response is attached to error.response
-    console.log('send had errors', error.response.statusCode);
-    setTimeout(function(){res.redirect('/')}, 3000);
-  });
-
-})
 
 // LISTENERS
 app.listen(port, function() {
