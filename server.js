@@ -9,7 +9,8 @@ var logger      = require('morgan');
 var path        = require('path')
 var port        = process.env.PORT || 4000;
 
-var sg = require('sendgrid')(process.env.API_KEY);
+var sg = require('sendgrid');
+sg.setApiKey(process.env.API_KEY);
 
 // MIDDLEWARE
 app.use(express.static(path.join(__dirname, 'public')))
@@ -24,66 +25,50 @@ app.get('/', function(req, res){
 });
 
 app.post('/appointment', function(req,res) {
-  var request = sg.emptyRequest({
-    method: 'POST',
-    path: '/v3/mail/send',
-    body: {
-      personalizations: [
-        {
-          to: [
-            {
-              email: 'currymich@gmail.com'
-            }
-          ],
-          subject: 'New Appointment Request from Bell Vision Site'
-        }
-      ],
-      from: {
-        email: req.body.email
-      },
-      content: [
-        {
-          type: 'text/html',
-          value: `<!DOCTYPE html>
-                    <html>
-                    <head>
-                      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-                      <meta http-equiv="Content-Style-Type" content="text/css">
-                      <style type="text/css">
-                        p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 43.0px; font: 24.0px Arial; color: #555555; -webkit-text-stroke: #555555}
-                        p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 21.0px; font: 18.0px Arial; color: #555555; -webkit-text-stroke: #555555}
-                        span.s1 {font-kerning: none; background-color: #ffffff}
-                        span.s2 {font: 12.0px Arial; font-kerning: none}
-                        table.t1 {border-collapse: collapse}
-                        td.td1 {width: 500.0px; min-width: 320.0px; max-width: 500.0px}
-                      </style>
-                    </head>
-                    <body>
-                    <table cellspacing="0" cellpadding="0" class="t1">
-                      <tbody>
-                        <tr>
-                          <td valign="top" class="td1">
-                            <p class="p1"><span class="s1"><b>﻿New Patient Application</b></span><span class="s2"><br><br>
-                    </span></p>
-                            <p class="p2"><span class="s1">New Patient?: ${req.body.new}</span></p>
-                            <p class="p2"><span class="s1">Patient Name: ${req.body.name}</span></p>
-                            <p class="p2"><span class="s1">Patient Phone Number: ${req.body.phone}</span></p>
-                            <p class="p2"><span class="s1">Patient Email: ${req.body.email}</span></p>
-                            <p class="p2"><span class="s1">Patient Date of Birth: ${req.body.dob}</span></p>
-                            <p class="p2"><span class="s1">Patient Insurance Provider: ${req.body.insurance}</span></p>
-                            <p class="p2"><span class="s1">Reason for visit: ${req.body.reason}</span></p>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    </body>
-                    </html>
-                    `
+  const msg = {
+    to:'currymich@gmail.com'
+    subject: 'New Appointment Request from Bell Vision Site'
+    from: req.body.email
+    html: `<!DOCTYPE html>
+            <html>
+            <head>
+              <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+              <meta http-equiv="Content-Style-Type" content="text/css">
+              <style type="text/css">
+                p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 43.0px; font: 24.0px Arial; color: #555555; -webkit-text-stroke: #555555}
+                p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 21.0px; font: 18.0px Arial; color: #555555; -webkit-text-stroke: #555555}
+                span.s1 {font-kerning: none; background-color: #ffffff}
+                span.s2 {font: 12.0px Arial; font-kerning: none}
+                table.t1 {border-collapse: collapse}
+                td.td1 {width: 500.0px; min-width: 320.0px; max-width: 500.0px}
+              </style>
+            </head>
+            <body>
+            <table cellspacing="0" cellpadding="0" class="t1">
+              <tbody>
+                <tr>
+                  <td valign="top" class="td1">
+                    <p class="p1"><span class="s1"><b>﻿New Patient Application</b></span><span class="s2"><br><br>
+            </span></p>
+                    <p class="p2"><span class="s1">New Patient?: ${req.body.new}</span></p>
+                    <p class="p2"><span class="s1">Patient Name: ${req.body.name}</span></p>
+                    <p class="p2"><span class="s1">Patient Phone Number: ${req.body.phone}</span></p>
+                    <p class="p2"><span class="s1">Patient Email: ${req.body.email}</span></p>
+                    <p class="p2"><span class="s1">Patient Date of Birth: ${req.body.dob}</span></p>
+                    <p class="p2"><span class="s1">Patient Insurance Provider: ${req.body.insurance}</span></p>
+                    <p class="p2"><span class="s1">Reason for visit: ${req.body.reason}</span></p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </body>
+            </html>
+            `
         }
       ]
     }
   });
-  sg.API(request)
+  sg.send(msg)
   .then(function (response) {
     console.log('send successful', response.body);
 
