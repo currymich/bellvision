@@ -63,9 +63,7 @@ app.post('/appointment', function(req,res) {
             </table>
             </body>
             </html>
-            `
-        }
-      ]
+            `      
     }
   });
   sg.send(msg)
