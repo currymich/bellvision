@@ -24,6 +24,7 @@ app.get('/', function(req, res){
 });
 
 app.post('/appointment', function(req,res) {
+  console.log('sending', req)
   var request = sg.emptyRequest({
     method: 'POST',
     path: '/v3/mail/send',
@@ -32,7 +33,7 @@ app.post('/appointment', function(req,res) {
         {
           to: [
             {
-              email: 'bellvisionoptometry@gmail.com'
+              email: 'currymich@gmail.com'
             }
           ],
           subject: 'New Appointment Request from Bell Vision Site'
