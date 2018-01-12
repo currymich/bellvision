@@ -26,15 +26,9 @@ app.get('/', function(req, res){
 
 app.post('/appointment', function(req,res) {
   const msg = {
-<<<<<<< HEAD
     to:'currymich@gmail.com',
     subject: 'New Appointment Request from Bell Vision Site',
     from: req.body.email,
-=======
-    to:'currymich@gmail.com'
-    subject: 'New Appointment Request from Bell Vision Site'
-    from: req.body.email
->>>>>>> 5eb700899eed62a6f55a0bc24025ad840ade9d99
     html: `<!DOCTYPE html>
             <html>
             <head>
