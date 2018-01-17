@@ -33,7 +33,7 @@ app.post('/appointment', function(req,res) {
         {
           to:[
             {
-              email: 'currymich@gmail.com'
+              email: 'bellvisionoptometry@gmail.com'
             }
           ],
           subject: 'New Appointment Request from Bell Vision Site'
