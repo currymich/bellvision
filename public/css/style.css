@@ -1,436 +1,286 @@
-/* Font Google - strong reaload time */
+/* Google Font */
 @import url(http://fonts.googleapis.com/css?family=Lato:400,300&subset=latin,latin-ext);
 
-html, body{
-  font-family: 'Lato', sans-serif;
-  font-size:15px;
-  font-weight:400;
-  color:black;
-  -webkit-font-smoothing: subpixel-antialiased!important;
+/***************
+
+Page Wide Styles
+
+***************/
+
+html,
+body {
+	font-family: "Lato", sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	color: black;
+	-webkit-font-smoothing: subpixel-antialiased !important;
 }
 
-a{
-  text-decoration:none;
-  outline:none;
+a {
+	text-decoration: none;
+	outline: none;
+}
+
+img {
+	max-width: 100%;
 }
 
 .container {
-  min-height: calc(100vh - 100px);
+	min-height: calc(100vh - 100px);
+}
+
+.container,
+.section,
+.header {
+	width: 100%;
 }
 
 .section .heading {
-  padding: 75px 0 50px 0;
+	padding: 2em 0.5em 1em 0.5em;
+  font-size: 2.0em;
+  text-align: center;
 }
 
-.section .content{
-  position:relative;
-  width:900px;
-  overflow:hidden;
-  margin: 0 auto;
-  padding-bottom: 75px;
+.section .content {
+	position: relative;
+	width: 90%;
+	overflow: hidden;
+	margin: 1em auto;
+	padding-bottom: 75px;
 }
 
-/* Menu */
+.section h3 {
+  font-size: 1em;
+  text-align: left;
+  line-height: 1.3;
+  font-size: 0.85rem;
+  margin: 1.5rem auto;
+  text-align: justify;
+}
+
+/********
+
+  Menu
+
+********/
 
 .header {
-  position:fixed;
-  top: 0px;
-  left: 0px;
-  width:100%;
-  height: auto;
-  background:white;
-  border-bottom:1px solid #f2f2f2;
-  z-index:1000;
-  padding: 10px;
-}
-
-.header.small {
-  padding: 3px 15px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: auto;
+	background: white;
+	border-bottom: 1px solid #f2f2f2;
+	z-index: 1000;
+	padding: 10px;
 }
 
 .header .logo {
+	margin: 0 auto;
+	width: 50%;
+	float: left;
+}
+
+.header img {
+  max-height: 40px;
+}
+
+.only_large {
+	display: none;
+}
+
+.header li {
+	font-size: 0.75em;
+	padding: 0.2em;
+	text-align: center;
+}
+
+.header nav li a {
+  color: #333;
+}
+
+/************
+
+  Hero Image
+
+************/
+
+#home {
+	padding-top: 150px;
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 5em;
+	background: url(../img/background/inside.jpeg) white no-repeat center center;
+	opacity: 0.8;
+	margin: 0 auto;
+	background-size: cover;
+}
+
+/***********
+
+  About Us
+
+************/
+
+#about-us {
+  background: #ffffff;
+}
+
+#about-us h1 {
+  color: #00c5c7;
+  padding-top: 0.5em;
+}
+
+.doctors .column {
+  margin-top: 3em;
+}
+
+.doctors h2 {
+  text-align: center;
+  margin: 2em 0;
+  letter-spacing: 4px;
+  font-weight: 400;
+}
+
+.doctors p {
+  text-align: justify;
+  font-size: 0.75em;
+  width: 80%;
+  margin: 30px auto;
+  line-height: 1rem;
+  font-weight: 300;
+}
+
+.doctors .circle {
+  height: 50vw;
+  max-height: 10em;
+  width: 50vw;
+  max-width: 10em;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
   margin: 0 auto;
-  width: 100%;
-  float: left;
+  border: 2px solid #f0f0f0;
+}
+
+.doctors .column.one .circle {
+  background: url(../img/doctors/j200.jpg) white no-repeat center center;
+}
+
+.doctors .column.two .circle {
+  background: url(../img/doctors/v200.jpg) white no-repeat center center;
+}
+
+.doctors .column.three .circle {
+  background: url(../img/doctors/m200.jpg) white no-repeat center center;
+}
+
+/**************
+
+  Glasses Brands
+
+**************/
+
+#glasses {
+  background: #e1e1e1;
+}
+
+.grid {
+	margin: 50px 0;
+	width: 100%;
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
 }
 
-.header.small .logo {
-  width: 50%;
-  justify-content: flex-start;
+.grid img {
+  box-sizing: border-box;
+	width: calc(100%/2);
+  max-width: 200px;
+	padding: 3px;
+  align-self: center;
 }
 
-.header .logo img {
-  max-width: 650px;
-  margin: 1em 0;
-}
+/**********
 
-.header.small .logo img {
-  max-height: 30px;
-}
+  Promos
 
-.header nav{
-  float: right;
-  width: 100%;
-}
+***********/
 
-.header.small nav {
-  width: 45%;
-}
-
-.header nav ul{
-  width:100%;
-  float:center;
-  text-align:center;
-  list-style:none;
-}
-
-.header nav li{
-   display:inline-block;
-   position:relative;
-}
-
-.header nav li a{
-  color:#333;
-  font-size:16px;
-  display: block;
-  padding: 0 20px 0 20px;
-  line-height:60px;
-  -webkit-transition: all 0.2s ease-in;
-	-moz-transition: all 0.2s ease-in;
-	-ms-transition: all 0.2s ease-in;
-	-o-transition: all 0.2s ease-in;
-	transition: all 0.2s ease-in;
-}
-
-.header nav li.active a{
-  color:#00c5c7;
-}
-
-.header nav li a:hover{
-  color:#00c5c7;
-}
-
-.header .promo-link{
-  color: red;
-}
-
-/* Hero Image */
-#home {
-  padding-top: 150px;
-  display: block;
-  position:relative;
-  width:100%;
-  height: 600px;
-  background: url(../img/background/inside.jpeg) white no-repeat center center;
-  opacity: .8;
-  margin: 0 auto;
-  background-size: cover;
-}
-
-/* About us */
-#about-us{
-  display: block;
-  position:relative;
-  width:100%;
-  background:#FFFFFF;
-  z-index:10;
-}
-
-
-#about-us h1{
-  font-size:50px;
-  color:#00c5c7;
-  text-align:center;
-  margin-top:20px;
-  letter-spacing:6px;
-  font-weight:bold;
-  text-transform:uppercase;
-  line-height:1.2;
-}
-
-#about-us h3{
-  font-size:20px;
-  color:#000000;
-  text-align:left;
-  margin-top:20px;
-  letter-spacing:3px;
-  line-height:1.2;
-  margin:30px auto;
-  position:relative;
-}
-
-
-.doctors{
-  display: block;
-  position:relative;
-  width:100%;
-  background:#FFFFFF;
-  z-index:10;
-}
-
-.doctors h2{
-  text-align:center;
-  margin-top:50px;
-  font-size:20px;
-  color:black;
-  line-height:1.2;
-  letter-spacing:6px;
-  width:100%;
-  position:relative;
-  font-weight:400;
-}
-
-.doctors p{
-  text-align:justify;
-  font-size:14px;
-  width:250px;
-  margin:30px auto;
-  color: black;
-  line-height:20px;
-  letter-spacing:0;
-  position:relative;
-  font-weight:300;
-}
-
-.doctors .column-one{
-  margin-top:20px;
-  width:300px;
-  float:left;
-  margin-bottom:70px;
-  height:600px;
-}
-
-.doctors .column-one .circle-one{
-  height: 200px;
-  position:relative;
-  margin:0 auto;
-  border:2px solid #f0f0f0;
-  background: url(../img/doctors/j200.jpg) white no-repeat center center;
-  -moz-border-radius:200px;
-  -webkit-border-radius:200px;
-  border-radius: 200px;
-  width: 200px;
-}
-
-.doctors .column-two{
-  margin-top:20px;
-  width:300px;
-  float:left;
-  margin-bottom:70px;
-  height:600px;
-}
-
-.doctors .column-two .circle-two{
-  height: 200px;
-  position:relative;
-  margin:0 auto;
-  border:2px solid #f0f0f0;
-  background: url(../img/doctors/v200.jpg) white no-repeat center center;
-  -moz-border-radius:200px;
-  -webkit-border-radius:200px;
-  border-radius: 200px;
-  width: 200px;
-}
-
-.doctors .column-three{
-  margin-top:20px;
-  width:300px;
-  float:left;
-  margin-bottom:70px;
-  height:600px;
-}
-
-.doctors .column-three .circle-three{
-  height: 200px;
-  position:relative;
-  margin:0 auto;
-  border:2px solid #f0f0f0;
-  background: url(../img/doctors/m200.jpg) white no-repeat center center;
-  -moz-border-radius:200px;
-  -webkit-border-radius:200px;
-  border-radius: 200px;
-  width: 200px;
-}
-
-/* glasses brands and grid */
-
-#glasses{
-  position:relative;
-  width:100%;
-  background:#e1e1e1;
-  z-index:10;
-}
-
-#glasses  h1{
-  font-size:34px;
-  color:black;
-  text-align:center;
-  margin-top:30px;
-  letter-spacing:6px;
-  font-weight:bold;
-  text-transform:uppercase;
-  line-height:1.2;
-}
-
-#glasses h2{
-  font-size:20px;
-  font-family: "calibri";
-  color:black;
-  text-align:center;
-  line-height:1.2;
-}
-
-.grid{
-  margin-top:20px;
-  width:100%;
-  position:relative;
-  margin-bottom:20px;
-  overflow:hidden;
-  float: right;
-}
-
-.grid img{
-  width:285px;
-  margin:0 15px 15px 0;
-  float: left;
-  position: relative;
-  overflow: hidden;
-}
-
-/*promo*/
 #promos {
-  width: 95vw;
-  height: 50vw;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#promos > div {
+#promos .content > div {
   display: flex;
+  flex-flow: column nowrap;
   justify-content: space-around;
 }
 
-#promos h1{
-  font-size:50px;
-  color:#000000;
-  text-align:center;
-  margin-top:20px;
-  letter-spacing:6px;
-  font-weight:bold;
-  text-transform:uppercase;
-  line-height:1.2;
+.promo.one {
+  background-image: url(../img/promo-one.jpg);
 }
 
-.promo-one{
-  background-image: url(../img/160dealposter-lg.jpg);
+.promo.two {
+  background-image: url(../img/promo-two.jpg);
+}
+
+.promo {
+  margin: 1em 0;
   background-size: cover;
-  width: 45vw;
-  height: 31vw;
-  float: left;
-  display: inline-block;
+  width: 90vw;
+  height: 60vw;
 }
 
-.promo-two{
-  background-image: url(../img/bellvisionspringsale.jpg);
-  background-size: cover;
-  width: 45vw;
-  height: 31vw;
-  float: right;
-  display: inline-block;
-}
+/*************
 
-/* insurances */
-#insurances{
-  position:relative;
-  width:100%;
-  z-index:10;
-  height:1000px;
-  background:url('../img/background/insurances.jpg') 0px 0px fixed;
-    -webkit-background-size: cover;
+ insurances
+
+**************/
+
+#insurances {
+  position: relative;
+  z-index: 10;
+  height: 1300px;
+  background: url("../img/background/insurances.jpg") 0px 0px fixed;
+  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
-#insurances .opacity{
-  position:absolute;
-  width:100%;
-  height:1000px;
-  background:rgba(79,79,79,0.8);
+#insurances .opacity {
+  position: absolute;
+  width: 100%;
+  height: 1300px;
+  background: rgba(79, 79, 79, 0.8);
 }
 
-#insurances .content{
-  position:absolute;
-  width:900px;
-  margin:auto;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
+#insurances h2 {
+  color: white;
 }
 
-.grid.insurances img {
-  width: 210px;
-}
+/**************
 
-#insurances h2{
-  color:white;
-  letter-spacing:1px;
-  font-size:32px;
-  font-weight:300;
-  text-align:center;
-}
+schedule visit
 
-#insurances h3{
-  padding: 3px;
-}
+*************/
 
-.insurance-list{
-  padding: 20px;
-  color:white;
+#visit h3 {
   text-align: center;
-  font-size:28px;
-  font-weight:300;
 }
 
-/*schedule visit*/
-#visit{
-  position:relative;
-  width:100%;
-  background:white;
-  z-index:10;
-  overflow:hidden;
-}
-
-#visit h1{
-  font-size:34px;
-  color:black;
-  text-align:center;
-  letter-spacing:6px;
-  font-weight:bold;
-  text-transform:uppercase;
-  line-height:1.2;
-}
-
-#visit h2{
-  font-size:24px;
-  color:black;
-  text-align:center;
-  margin-top:10px;
-  letter-spacing:3px;
-  line-height:1.2;
-}
-
-#visit a{
-  font-size:24px;
-  text-align:center;
-  margin-top:10px;
-  letter-spacing:3px;
-  line-height:1.2;
+#visit a {
   color: #00c5c7;
+}
+
+#visit form h2 {
+  text-align: center;
+  font-size: 25px;
 }
 
 .field {
@@ -442,25 +292,32 @@ a{
   padding: 2em;
   max-width: 400px;
   margin: 3em auto;
-
 }
 
 label {
   display: block;
-  margin-top: 2em;
+  margin-top: 1em;
   margin-bottom: 0.5em;
   color: #999999;
 }
 
-input {
+input, select {
   width: 95%;
-  padding: 0.5em 0.5em;
-  font-size: 1.2em;
+  padding: 0.5em;
+  font-size: 0.85em;
   border-radius: 3px;
-  border: 1px solid #D9D9D9;
+  border: 1px solid #d9d9d9;
   color: #555;
   display: inline-block;
   box-shadow: inset 0 1px 3px #ddd;
+  margin: 1em 0;
+}
+
+select {
+  padding: 0;
+  text-indent: 0.5em;
+  height: 2em;
+  width: 100%;
 }
 
 input::placeholder {
@@ -480,7 +337,8 @@ input::placeholder {
   text-align: center;
 }
 
-#submit:hover, #submit:focus {
+#submit:hover,
+#submit:focus {
   background-color: #b5f7f7;
   cursor: pointer;
 }
@@ -490,29 +348,29 @@ input::placeholder {
   box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1) inset;
 }
 
-/* Contact */
+/************
 
-#contact{
-  position:relative;
-  width:100%;
-  height: auto;
+  Contact
+
+************/
+
+#contact {
   background: #eee;
 }
 
-#contact .heading{
-  color: #004EC7;
-  font-weight: bold;
+#contact .heading, #contact span {
+  color: #004ec7;
 }
 
-#contact h1{
+#contact h1 {
   text-align: center;
   color: black;
-  font-size:34px;
-  margin-top:20px;
-  letter-spacing:6px;
-  font-weight:bold;
-  text-transform:uppercase;
-  line-height:1.2;
+  font-size: 34px;
+  margin-top: 20px;
+  letter-spacing: 6px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
 }
 
 #contact .content {
@@ -522,32 +380,38 @@ input::placeholder {
   margin: 0 auto;
 }
 
+#contact div {
+	width: 100%;
+}
+
 #contact .content > div {
-  width: 100%;
   margin: 1em auto;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   justify-content: space-around;
   align-items: center;
 }
 
-#contact img, #contact iframe {
-  width: 45%;
-  max-height: 400px;
-  object-fit: cover;
+#contact img,
+#contact iframe {
+  margin: 1em auto;
+  width: 100%;
 }
 
-.contact-text{
+.contact-text {
   text-align: left;
-  font-weight:300;
-  color: black;
+  font-weight: 300;
+}
+
+.contact-text div {
+  line-height: 1.4;
+  font-size: 0.85em;
 }
 
 .contact-text h5 {
-  width: 30%;
-  font-size:24px;
-  margin-top:15px;
-  line-height:1.5;
+  font-size: 24px;
+  margin-top: 15px;
+  line-height: 1.5;
 }
 
 .contact-text .time {
@@ -555,10 +419,14 @@ input::placeholder {
   font-weight: 500;
 }
 
+/**********
 
-/* Footer */
-.footer{
-  background:#3c3c3c;
+  Footer
+
+***********/
+
+.footer {
+  background: #3c3c3c;
   width: 100vw;
   height: 150px;
   padding-top: 10px;
@@ -568,17 +436,256 @@ input::placeholder {
   justify-content: space-around;
 }
 
-.copyright{
-  font-weight:300;
-  margin:0 auto;
-  text-align:center;
-  font-size:14px;
-  line-height:14px;
-  color:#a4a4a4;
+.copyright {
+  font-weight: 300;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 14px;
+  line-height: 14px;
+  color: #a4a4a4;
 }
 
-.footer img{
+.footer img {
   height: 75px;
   width: 75px;
   padding: 5px;
+}
+
+/************************************
+
+
+          DESKTOP STYLES
+
+
+************************************/
+
+@media (min-width: 700px) {
+	html,
+	body {
+		font-size: 15px;
+	}
+
+	.section .heading {
+    line-height: 1.2;
+    font-size: 2.5em;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 6px;
+		padding: 75px 0 50px 0;
+    text-transform: uppercase;
+	}
+
+	.section .content {
+		max-width: 900px;
+		padding-bottom: 75px;
+	}
+
+  .section h3 {
+    font-size: 1.5rem;
+  }
+
+	/**********
+
+     Menu
+
+  ***********/
+
+	.header {
+		padding: 10px;
+	}
+
+	.header.small {
+		padding: 3px 15px;
+	}
+
+	.header .logo {
+		margin: 0 auto;
+		width: 100%;
+		float: left;
+		display: flex;
+		justify-content: center;
+	}
+
+	.header.small .logo {
+    width: 16%;
+		justify-content: flex-start;
+	}
+
+	.header .logo img {
+    max-height: none;
+		max-width: 650px;
+		margin: 1em 0;
+	}
+
+	.header.small .logo img {
+		max-height: 30px;
+	}
+
+	.header nav {
+		float: right;
+		width: 100%;
+	}
+
+	.header.small nav {
+		width: 84%;
+	}
+
+	.header nav ul {
+		width: 97%;
+    display: flex;
+    justify-content: center;
+	}
+
+  .header.small nav ul {
+    justify-content: flex-end;
+    padding-right: 20px;
+  }
+
+	.header nav li {
+		display: inline-block;
+		position: relative;
+	}
+
+	.header nav li a {
+    box-sizing: border-box;
+		font-size: 1.25em;
+		display: block;
+    padding: 0 1.25vw;
+		line-height: 60px;
+	}
+
+
+	.header nav li.active a {
+		color: #00c5c7;
+	}
+
+	.header nav li a:hover {
+		color: #00c5c7;
+	}
+
+	.header .promo-link {
+		color: red;
+	}
+
+	/**********
+
+   Hero Image
+
+  **********/
+
+	#home {
+		height: 40em;
+	}
+
+	/***********
+
+   About us
+
+  ************/
+
+  #about-us h1 {
+    color: #00c5c7;
+    padding: 2.25em 0 1em 0;
+  }
+
+  .doctors .column {
+    width: calc(100%/3);
+    float: left;
+  }
+
+	.doctors h2 {
+		font-size: 1.25em;
+	}
+
+	.doctors p {
+		font-size: 16px;
+    width: 85%;
+		line-height: 20px;
+	}
+
+  .doctors .circle {
+    height: 200px;
+    max-height: none;
+    width: 200px;
+    max-width: none;
+  }
+
+	/*****************
+
+   glasses brands and grid
+
+  *****************/
+
+	.grid img {
+		width: calc(100%/3);
+		padding: 10px;
+	}
+
+	/*************
+
+    promo
+
+  **************/
+
+  #promos .content > div {
+    flex-flow: row nowrap;
+  }
+
+  .promo {
+    width: 45vw;
+    max-width: 420px;
+    height: 30vw;
+    max-height: 280px;
+  }
+
+	/*************
+
+   insurances
+
+  **************/
+
+	#insurances {
+		height: 1000px;
+	}
+
+	#insurances .opacity {
+		height: 1000px;
+	}
+
+	.grid.insurances img {
+		width: calc(100%/4);
+    padding: 10px;
+	}
+
+	/**************
+
+  schedule visit
+
+  *************/
+
+  input, select {
+    font-size: 1.2em;
+  }
+
+	/************
+
+    Contact
+
+  ************/
+
+	#contact .content > div {
+		flex-flow: row nowrap;
+	}
+
+	#contact img,
+	#contact iframe {
+		width: 45%;
+    height: 300px;
+	}
+
+  .contact-text div {
+    width: 45%;
+    font-size: 1.25em;
+  }
+
 }
