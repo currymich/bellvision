@@ -45,7 +45,7 @@ img {
 	position: relative;
 	width: 90%;
 	overflow: hidden;
-	margin: 1em auto;
+	margin: 0 auto;
 	padding-bottom: 75px;
 }
 
@@ -179,6 +179,35 @@ img {
 
 /**************
 
+  Available Services
+
+**************/
+
+#services .heading {
+	font-size: 1.4em;
+	color: #00c5c7;
+}
+
+#services ul {
+	columns: 1;
+}
+
+#services li {
+	font-size: 0.75em;
+	line-height: 1.2;
+	padding: 5px 0;
+}
+
+#services h3 {
+	font-size: 0.8em;
+	text-align: center;
+	margin-top: 3em;
+	line-height: 1.75;
+	color: #f33;
+}
+
+/**************
+
   Glasses Brands
 
 **************/
@@ -203,39 +232,6 @@ img {
   align-self: center;
 }
 
-/**********
-
-  Promos
-
-***********/
-
-#promos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#promos .content > div {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-around;
-}
-
-.promo.one {
-  background-image: url(../img/promo-one.jpg);
-}
-
-.promo.two {
-  background-image: url(../img/promo-two.jpg);
-}
-
-.promo {
-  margin: 1em 0;
-  background-size: cover;
-  width: 90vw;
-  height: 60vw;
-}
-
 /*************
 
  insurances
@@ -245,7 +241,7 @@ img {
 #insurances {
   position: relative;
   z-index: 10;
-  height: 1300px;
+  height: 1400px;
   background: url("../img/background/insurances.jpg") 0px 0px fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -256,12 +252,51 @@ img {
 #insurances .opacity {
   position: absolute;
   width: 100%;
-  height: 1300px;
+  height: 1400px;
   background: rgba(79, 79, 79, 0.8);
 }
 
-#insurances h2 {
-  color: white;
+#insurances .heading, #insurances h3 {
+	color: white;
+}
+
+#insurances h3 {
+	font-size: 20px;
+	text-align: center;
+}
+
+/**********
+
+Promos
+
+***********/
+
+#promos {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: #e1e1e1;
+}
+
+#promos .content > div {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+}
+
+.promo.one {
+	background-image: url(../img/promo-one.jpg);
+}
+
+.promo.two {
+	background-image: url(../img/promo-two.jpg);
+}
+
+.promo {
+	margin: 1em 0;
+	background-size: cover;
+	width: 90vw;
+	height: 60vw;
 }
 
 /**************
@@ -355,22 +390,11 @@ input::placeholder {
 ************/
 
 #contact {
-  background: #eee;
+	background: #e1e1e1;
 }
 
-#contact .heading, #contact span {
+#contact span {
   color: #004ec7;
-}
-
-#contact h1 {
-  text-align: center;
-  color: black;
-  font-size: 34px;
-  margin-top: 20px;
-  letter-spacing: 6px;
-  font-weight: bold;
-  text-transform: uppercase;
-  line-height: 1.2;
 }
 
 #contact .content {
@@ -609,6 +633,28 @@ input::placeholder {
     width: 200px;
     max-width: none;
   }
+
+	/**************
+
+	  Available Services
+
+	**************/
+
+	#services .heading {
+		font-size: 1.85em;
+	}
+
+	#services ul {
+		columns: 2;
+	}
+
+	#services li {
+		font-size: 1.2em;
+	}
+
+	#services h3 {
+		font-size: 1.5em;
+	}
 
 	/*****************
 
