@@ -9,6 +9,8 @@
 
 		<link rel="shortcut icon" href="img/favicon.png">
 
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 
@@ -26,13 +28,19 @@
     </div>
     <nav>
       <ul>
-        <li class="only_large"><a href="#home">HOME</a></li>
         <li class="only_large"><a href="#about-us">ABOUT US</a></li>
         <li><a href="#visit">SCHEDULE A VISIT</a></li>
         <li><a href="#contact">CONTACT US</a></li>
         <li class="only_large"><a class="promo-link" href="#promos"><strong>SPECIAL OFFERS!</strong></a></li>
+        <li id="google_translate_element"></li>
       </ul>
     </nav>
+  <!-- Translator -->
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,es,vi', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+    }
+    </script>
   </header>
 
   <div class="container">
@@ -40,14 +48,6 @@
   <!-- intro image of inside of office-->
     <div class="section" id="home"></div>
 
-<!-- Translator -->
-    <div id="google_translate_element"></div>
-    <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,es,vi', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-    }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   <!-- welcome and mission statement -->
     <div class="section" id="about-us">
