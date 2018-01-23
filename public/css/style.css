@@ -102,7 +102,11 @@ img {
 
 .goog-te-gadget-simple {
 	border: none;
-	padding: none;
+	padding: 0;
+}
+
+.goog-te-menu-value {
+	margin: 0;
 }
 
 .goog-te-gadget-icon {
@@ -492,7 +496,7 @@ input::placeholder {
 
 ************************************/
 
-@media (min-width: 700px) {
+@media (min-width: 800px) {
 	html,
 	body {
 		font-size: 15px;
@@ -581,7 +585,7 @@ input::placeholder {
 
 	.header nav li a {
     box-sizing: border-box;
-		font-size: 1.25em;
+		font-size: 1.15em;
 		display: block;
     padding: 0 1.25vw;
 		line-height: 60px;
